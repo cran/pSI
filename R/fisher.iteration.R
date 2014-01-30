@@ -4,7 +4,8 @@
 #'@description 
 #'\code{fisher.iteration} will test a candidate gene list for overrepresenation in the various cell type/pSI threshold combinations produced by
 #'the specificty.index function. 
-#'NOTE:Supplementary data (supplementary tables,human & mouse expression sets, calculated pSI datasets, candidate gene lists, etc.) can be found in \code{pSI.data} package.
+#'NOTE:Supplementary data (human & mouse expression sets, calculated pSI datasets, etc.) can be found in \code{pSI.data} package located at the following URL:
+#'\url{http://genetics.wustl.edu/jdlab/psi_package/}
 #'
 #'@details
 #'This function is used to answer the question of what is the probability that a certain number of genes specific to a certain cell type/sample occured by chance
@@ -35,7 +36,8 @@
 #'data(candidate.genes)
 #'##run Fisher's exact test for overrperesentation on pSI.out for the AutDB 
 #'##candidate gene list across all cell types/sample types & pSI thresholds
-#'fisher.out.AutDB <- fisher.iteration(sample.data$pSI.output, candidate.genes$AutDB)
+#'fisher.out.AutDB <- fisher.iteration(pSIs=sample.data$pSI.output, 
+#'                                          candidate.genes=candidate.genes$AutDB)
 #'
 
 fisher.iteration<-function(pSIs, candidate.genes, background="data.set", p.adjust=TRUE){  
@@ -60,7 +62,7 @@ fisher.iteration<-function(pSIs, candidate.genes, background="data.set", p.adjus
     kgxref.human <- read.table(gzfile(temp), sep="\t", row.names=NULL, header=FALSE, stringsAsFactors=FALSE, quote="")
     unlink(temp)
     kgxref.human <- kgxref.human[,5]
-    total <- 13421
+    #total <- 13421
     total <- sum(!is.na(match(toupper(rownames(pSIs)), toupper(kgxref.human))))
     
   }else{
@@ -72,7 +74,7 @@ fisher.iteration<-function(pSIs, candidate.genes, background="data.set", p.adjus
   index <- cbind(as.numeric(c(1:length(pSIs[,1]))),toupper(rownames(pSIs)))
   
   #create 3 column dataset which is comprised of gene index, boolean if gene is found in candidate list, and gene symbol in the third column
-  candidate.genes <- cbind(index[,1], match(index[,2], toupper(candidate.genes)), index[,2])
+  candidate.genes <- cbind(index[,1], match(index[,2], toupper(unique(candidate.genes))), index[,2])
   
   #Create temporary variable, cnv_temp and assign value of zero to genes with no match and value of 1 to genes with a match
   cnv_temp <- candidate.genes

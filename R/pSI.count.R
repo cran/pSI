@@ -7,7 +7,8 @@
 #'@details
 #'Returns data frame consisting of 6 rows, one for each pSI threshold, and as many columns as cell types/samples were included in the analysis.
 #'Each cell type/sample will have a count of many genes whose pSI values fall below each respective threshold for each cell type/sample.
-#'NOTE:Supplementary data (supplementary tables,human & mouse expression sets, calculated pSI datasets, candidate gene lists, etc.) can be found in \code{pSI.data} package.
+#'NOTE:Supplementary data (human & mouse expression sets, calculated pSI datasets, etc.) can be found in \code{pSI.data} package located at the following URL:
+#'\url{http://genetics.wustl.edu/jdlab/psi_package/}
 #'
 #'@param pSIs  data frame output from \code{specificity.index} function with the number of columns equal to the number of samples and genes as rows.
 #'@param write.csv logical variable indicating if csv files will be written to the current working directory (default value is FALSE)

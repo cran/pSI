@@ -40,10 +40,10 @@ number of profiles. This measure correctly predicts in situ
 hybridization patterns for many cell types.
 \code{specificity.index} returns a data frame of equal size
 as input data frame, with pSI values replacing the
-expression values. NOTE:Supplementary data (supplementary
-tables,human & mouse expression sets, calculated pSI
-datasets, candidate gene lists, etc.) can be found in
-\code{pSI.data} package.
+expression values. NOTE:Supplementary data (human & mouse
+expression sets, calculated pSI datasets, etc.) can be
+found in \code{pSI.data} package located at the following
+URL: \url{http://genetics.wustl.edu/jdlab/psi_package/}
 }
 \details{
 \eqn{SI_{n,1}= \frac{ \sum_{k=2}^m rank( \frac{ IP_{1,n} }{

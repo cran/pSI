@@ -3,19 +3,20 @@
 \alias{pSI}
 \docType{package}
 \title{
-Specific Index Statistic
+Specificity Index Statistic
 }
 \description{
 This package contains functions to calculate the Specificity Index statistic, which can be used for comparative quantitative analysis to identify genes enriched in specific cell populations across a large number of profiles, as well as perform numerous post-processing operations
 
-NOTE:Supplementary data (supplementary tables,human & mouse expression sets, calculated pSI datasets, candidate gene lists, etc.) can be found in \code{pSI.data} package.
+NOTE:Supplementary data (human & mouse expression sets, calculated pSI datasets, etc.) can be found in \code{pSI.data} package located at the following URL:
+\url{http://genetics.wustl.edu/jdlab/psi_package/}
 }
 \details{
 \tabular{ll}{
 Package: \tab pSI\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2013-12-03\cr
+Version: \tab 1.1\cr
+Date: \tab 2014-1-30\cr
 License: \tab GPL (>= 2)\cr
 }
 

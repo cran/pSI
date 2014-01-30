@@ -11,6 +11,9 @@
 #'  \item{\code{candidate.genes$hcrt.genes}}\cr{Narcolepsy Candidate Gene List (N=63)}
 #'  \item{\code{candidate.genes$retinopathy.genes}}\cr{Human Congenital Retinopathies Disease Gene List (N=120)}
 #'}
+#'NOTE:Supplementary data (human & mouse expression sets, calculated pSI datasets, etc.) can be found in \code{pSI.data} package located at the following URL:
+#'\url{http://genetics.wustl.edu/jdlab/psi_package/}
+
 #'
 #'@details
 #'\itemize{

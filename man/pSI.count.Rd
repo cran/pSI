@@ -24,9 +24,10 @@ threshold, and as many columns as cell types/samples were
 included in the analysis. Each cell type/sample will have a
 count of many genes whose pSI values fall below each
 respective threshold for each cell type/sample.
-NOTE:Supplementary data (supplementary tables,human & mouse
-expression sets, calculated pSI datasets, candidate gene
-lists, etc.) can be found in \code{pSI.data} package.
+NOTE:Supplementary data (human & mouse expression sets,
+calculated pSI datasets, etc.) can be found in
+\code{pSI.data} package located at the following URL:
+\url{http://genetics.wustl.edu/jdlab/psi_package/}
 }
 \examples{
 ##load sample pSI output

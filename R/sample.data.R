@@ -3,6 +3,8 @@
 #'
 #'@description
 #'Sample expression matrix and sample specificity index statistic (pSI) output data sets used to illustrate the \code{pSI} package functions.
+#'NOTE:Supplementary data (human & mouse expression sets, calculated pSI datasets, etc.) can be found in \code{pSI.data} package located at the following URL:
+#'\url{http://genetics.wustl.edu/jdlab/psi_package/}
 #'
 #'@details
 #'Sample expression matrix is the Brainspan RNAseq data condensed 

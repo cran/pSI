@@ -51,9 +51,10 @@ fisher.iteration(pSIs, candidate.genes, background = "data.set",
 \code{fisher.iteration} will test a candidate gene list for
 overrepresenation in the various cell type/pSI threshold
 combinations produced by the specificty.index function.
-NOTE:Supplementary data (supplementary tables,human & mouse
-expression sets, calculated pSI datasets, candidate gene
-lists, etc.) can be found in \code{pSI.data} package.
+NOTE:Supplementary data (human & mouse expression sets,
+calculated pSI datasets, etc.) can be found in
+\code{pSI.data} package located at the following URL:
+\url{http://genetics.wustl.edu/jdlab/psi_package/}
 }
 \details{
 This function is used to answer the question of what is the
@@ -73,7 +74,8 @@ data(sample.data)
 data(candidate.genes)
 ##run Fisher's exact test for overrperesentation on pSI.out for the AutDB
 ##candidate gene list across all cell types/sample types & pSI thresholds
-fisher.out.AutDB <- fisher.iteration(sample.data$pSI.output, candidate.genes$AutDB)
+fisher.out.AutDB <- fisher.iteration(pSIs=sample.data$pSI.output,
+                                         candidate.genes=candidate.genes$AutDB)
 }
 \author{
 Xiaoxiao Xu, Alan B. Wells, David OBrien, Arye Nehorai,
